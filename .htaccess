@@ -1,0 +1,22 @@
+# Allow clean url's
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.php [L]
+</IfModule>
+
+# Set upload rules here
+<IfModule mod_php5.c>
+   php_value upload_max_filesize 64M
+   php_value post_max_size 64M
+</IfModule>
+
+# Prevents server loop for a blocked IP
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+# Block IP addresses here
+#deny from 212.92.53.18

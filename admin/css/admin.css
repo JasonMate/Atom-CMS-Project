@@ -1,0 +1,758 @@
+@charset "utf-8";
+/* ADMIN CSS
+AUTHOR: Jason Mate
+CONTACT: jmate421@gmail.com
+LAST EDITED: 07-19-2015
+
+COLOR SCHEME:
+#333 dark grey
+#fff white
+#fdfdfd light grey
+#ccc medium grey
+*/
+
+/* Google Fonts */
+/* @import url(http://fonts.googleapis.com/css?family=Plaster); */
+/* @import url(http://fonts.googleapis.com/css?family=Cantata+One); */
+
+/* =============================RESET============================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+strong {
+ font-weight: bold; 
+}
+
+/* =============================LAYOUT============================ */
+html, body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+  background-color: #fff;
+}
+
+#bg {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto;
+  min-width: 1200px;
+}
+
+#admin-header {
+  width: 100%;
+  background-color: #fdfdfd;
+  min-width: 800px;
+  border-bottom: 1px solid #333; 
+}
+
+#admin-content {
+  margin-left: 200px;
+  padding: 0px 0px; 
+ /* border-right: 1px solid #333; */
+  border-left: 1px solid #333;  
+  overflow: auto;
+  min-height: 896px;
+}
+
+.content-wrap {
+  padding: 1%; 
+  overflow: auto;
+}
+
+/* ==============================LOGO============================== */
+
+#admin-logo a{  
+  font-size:24px; 
+  color: #000;
+  font-weight: bold;
+}
+
+#admin-logo a {
+  text-decoration: none;
+}
+
+/* ==============================NAV=============================== */
+/* USER NAVIGATION - header.php */
+#user-nav {
+  float: right;
+  margin-right: 20px;
+}
+
+#user-nav li {
+
+}
+
+#user-nav a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 50px;
+  text-align: left;
+}
+
+.dropdown-menu {
+  display:none; 
+  position: absolute; 
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; 
+}
+
+.dropdown-menu li a:hover{ 
+  text-decoration: none; 
+}
+
+/* SIDEBAR NAVIGATION */
+
+#admin-sidebar {
+  width: 200px;
+  float: left;  
+  min-height: 895px;
+}
+
+.inner-wrap {
+  padding: 10px 0px 10px 30px;  
+}
+
+#admin-navigation li {
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #333;  
+}
+
+#admin-navigation li:hover {
+  background-color: #f7f7f7; 
+}
+
+
+#admin-navigation a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  width: 200px;
+  padding: 10px 0px 10px 30px;
+  font-weight: bold;  
+}
+
+
+/* ============================ELEMENTS=========================== */
+/* HEADER ELEMENTS */
+h1{
+  font-size: 29px;
+  font-weight: bold;
+  background-color: #fdfdfd;
+  color: #333;
+  padding: 0px 30px;
+  border-bottom: 1px solid #333;
+}
+
+h2{
+  font-size: 26px; 
+  font-weight: bold; 
+}
+
+h3{
+  font-size: 20px;  
+  font-weight: bold;
+}
+
+h4{
+  font-size: 16px; 
+  font-weight: bold; 
+}
+
+/* FORM ELEMENTS */
+.form-input {
+  padding-left: 10px; 
+  height: 30px;
+  width: 90%;
+}
+
+.form-input-hidden {
+  display:none; 
+}
+
+label {
+  font-weight: bold; 
+}
+
+.submit {
+  cursor: pointer;
+  margin: 5px 5px;
+  padding: 8px;    
+}
+
+.submit-right {
+  cursor: pointer; 
+  float: right;
+  margin: -39px 5px 5px 5px;
+  padding: 8px 30px;    
+}
+
+/* ===========================DASHBOARD============================ */
+.dash-title {
+  background-color: #f7f7f7;
+  padding: 10px 0px 10px 20px; 
+  margin-bottom: 5px;
+}
+
+.dashboard-wrap {
+ -webkit-columns: 2;
+ -moz-columns: 2;
+ columns: 2; 
+}
+
+#backup-btn {
+  cursor: pointer;
+  padding: 14px 14px;
+  float: right;
+  margin: -57px -1px 0px 0px;
+
+}
+
+#backup-btn i{
+  margin: 0px 5px;
+  font-size: 20px;
+}
+
+#backup-btn:hover i{
+  color: #44B090;
+}
+
+.db-manager {
+  border: 1px solid #ccc;
+  width: 95%;
+  margin: 20px;
+  padding-bottom: 20px;
+  background-color: #fdfdfd;
+  display: inline-block;
+}
+
+.db-manager > div {
+  margin: 5px 1%;
+  width: 47%;
+  display: inline-table;
+}
+
+.db-manager > .config-settings {
+  width: 96%; 
+}
+
+.db-manager > .config-settings p {
+  background: #FFE7E7;  
+}
+
+.db-manager p {
+  padding: 1%;
+  background: #E0E0E0;
+  margin: 1%;
+}
+
+.db-manager a {
+  text-decoration: none;
+  color: #333; 
+}
+
+.db-manager .serverstats {
+  padding: 1%;
+  width: 96%;
+  word-break:break-all;
+  font-size: 12px;
+}
+
+.db-manager .serverstats tr {
+  padding: 5px 2%;
+  display: block;
+}
+
+.db-manager .serverstats tr:nth-child(2n+0) {
+	background: #f7f7f7;
+}
+.db-manager .serverstats tr:nth-child(2n+1) {
+    background: #e0e0e0;
+}
+
+.db-manager li {
+  list-style: disc; 
+  margin: 10px 0px 0px 30px;
+}
+
+.db-manager li a {
+  text-decoration: none;
+  color: #44B090; 
+  font-weight: bold;
+}
+
+.db-manager li a:hover {
+  text-decoration: underline; 
+}
+
+/* =============================PAGES============================== */
+.inner-content {
+  margin-right: 25%;  
+}
+
+.content-side {
+  width: 25%;
+  float: right;  
+  min-height: 850px;
+  border-left: 1px solid #333;
+  color: #333;  
+}
+
+.new-page {
+  padding: 10px 0px 10px 30px; 
+  display: block;
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+  background-color: #fdfdfd; 
+}
+
+div#pagination_wrap {
+  border-bottom:1px solid #333;  
+  padding: 13px 30px;
+  text-align: center;
+}
+
+.content-side div#pagination_wrap {
+  background-color: #fdfdfd;
+}
+
+div#pagination_controls{ 
+  font-size:16px;
+  font-weight: bold;
+}
+
+div#pagination_controls a{ text-decoration: none;}
+
+.page-item {
+  padding: 10px 0px 10px 30px; 
+  border-bottom: 1px solid #333; 
+  background-color: #fdfdfd;
+}
+
+.new-page:hover, .page-item:hover {
+  background-color: #f7f7f7;  
+}
+
+.content-side a {
+  text-decoration: none;
+  color: #333;  
+}
+
+/* PAGES FORM */
+.pages-form fieldset table {
+  width: 100%;
+  margin: 0px;  
+}
+
+.pages-form fieldset table td {
+  border: 1px solid #ccc;  
+}
+
+.pages-form fieldset table td:nth-of-type(2), 
+.pages-form fieldset table td:nth-of-type(3), 
+.pages-form fieldset table td:nth-of-type(4) {
+  width: 18%; 
+}
+
+.pages-form fieldset table td:nth-of-type(5) {
+  width: 18%; 
+}
+
+.pages-form fieldset table th {
+  border: 1px solid #ccc;
+  text-align: left;
+  background-color: #fdfdfd;  
+}
+
+.pages-form fieldset table th label {
+   margin-left: 10px;  
+}
+
+.pages-form .form-input {
+ width: 92%;
+ border: 0;
+ outline: none;
+}
+
+.pages-form .form-input:active {
+  
+}
+
+.pages-form .slider-input {
+  width: 80%;
+  height: 30px; 
+  border: 0;
+  padding-left: 10px;
+}
+
+.pages-form .editor {
+  height: 450px;
+}
+
+.pages-form .editor-text {
+  height: 543px;
+  width: 97%;
+  border: 0px;
+  overflow: hidden;
+  resize: none;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #333;
+}
+
+/* =============================POSTS============================== */
+.del-post {
+  height: 25px;
+  margin-right: 5%;
+  padding: 0px 7px;  
+  float: right; 
+  cursor: pointer;
+}
+
+/* =============================USERS============================== */
+/* sidebar for users section */
+.users-new {
+  width: 99%;
+  padding: 10px 0px 10px 30px; 
+  display: block;
+  border-bottom: 1px solid #333;
+  font-weight: bold; 
+  background-color: #fdfdfd;
+}
+
+.users-new:hover {
+  background-color: #f7f7f7; 
+}
+
+#avatar-dropzone {
+  margin: 0px 400px 0px 0px;
+  min-height: 200px;  
+}
+
+.users-form {
+  overflow: auto;  
+}
+
+.users-form .form-input {
+  height: 30px;
+  width: 96.5%;
+  margin-bottom: 10px; 
+}
+
+.users-form #status {
+  height: 36px;
+  width: 99%;
+}
+
+.users-form fieldset {
+  float: left;
+  margin: 20px 1% 0px 1%;
+  width: 30.6%;
+}
+
+#avatar {
+  float: left;
+  margin: 20px 1%;
+}
+
+.avatar-container {		
+  width: 200px;
+  height: 200px;  
+  background-size: cover;
+  background-position: center center;			
+}
+
+#profile-info {
+  padding: 20px 1%;
+  float: left;
+  width: 97.5%;
+}
+
+#user-bio {
+  min-height: 200px;
+  padding: 1%;
+  resize: vertical; 
+}
+
+/* =============================SETTINGS=========================== */
+.settings-form {
+  margin-top: 10px; 
+  width: 80%;
+}
+
+.settings-form .form-input {
+  margin: 0px 0px 20px 0px;
+  display: inline-block;  
+}
+
+.settings-form .label-table {
+  width: 150px;
+}
+
+.settings-form .label-table2 {
+  padding: 0px 10px;
+}
+
+.settings-form tr {
+  margin-bottom: 10px;
+}
+
+.settings-title {
+  background-color: #f7f7f7;
+  padding: 10px 0px 10px 20px;
+}
+
+/* ==============================SLIDERS=========================== */
+
+
+/* ==============================THEMES============================ */
+.child-css {
+  width: 700px;
+  height: 300px; 
+}
+
+.submit-css {
+  clear: both;
+}
+
+/* =============================WIDGETS============================ */
+.widget-section {
+  width: 100%;
+  overflow: auto;
+}
+
+.widgets-form {
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  float: left;
+  width: 445px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.widgets-form fieldset {
+
+}
+
+.widgets-form #value {
+  padding: 10px;
+  width: 95%;
+  resize: none;   
+}
+
+.widgets-form .submit {
+  margin: 5px 0px;
+  padding: 3px 10px;    
+}
+
+/* ============================COMMENTS============================ */
+.comments-form {
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  float: left;
+  width: 235px;  
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.comments-form .fa-thumbs-up { color: green; }
+.comments-form .fa-thumbs-down { color: red; }
+.comments-form #commentName { width: 76%; }
+
+.comments-form textarea {
+  padding: 10px;
+  width: 90%;
+  resize: none;   
+}
+
+.comments-form .submit {
+  margin: 5px 0px;
+  padding: 3px 10px; 
+  float: left;   
+}
+
+.delete-comment {
+  height: 25px;
+  padding: 0px 7px;  
+  float: right; 
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* ==============================MEDIA============================= */
+.img-wrap {
+  background-color: #f7f7f7; 
+  color: #000;
+  border: 1px solid #ccc;
+  width: 215px;
+  height: 240px;
+  overflow: hidden;
+  float: left;
+  padding: 20px 20px 30px 20px;
+  margin: 10px;
+}
+
+.img-wrap > div {
+  height: 220px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.img-url {
+  font-size:10px;
+  margin-bottom: 10px;
+  word-wrap:break-word;
+}
+
+.img-wrap img {
+  width: 100%; 
+}
+
+.delete-img {
+  height: 25px;
+  padding: 0px 7px;  
+  float: right; 
+  cursor: pointer;
+}
+
+.fa-trash-o {
+  color: #000;
+}
+
+.delete-img:hover .fa-trash-o{
+  color: #DD2124;
+}
+
+.dropzone {
+  min-height: 200px;
+}
+
+.media_pagination_wrap {
+  display: block;
+  padding: 10px;
+  width: 98%;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.btn-delete-filter { margin-bottom: -10px }
+
+/* ===========================NAVIGATION=========================== */
+.add-nav table tr {}
+
+.add-nav table td, .nav-table td {
+  padding: .7%; 
+}
+
+.nav-table {
+  width: 95%; 
+}
+
+.nav-table .form-input{
+  width: 100%; 
+}
+
+.edit-nav table tr {}
+
+.nav-table td:nth-of-type(2),
+.nav-table td:nth-of-type(4),
+.nav-table td:nth-of-type(6) {
+  width: 18%; 
+}
+
+.nav-table td:nth-of-type(8), 
+.nav-table td:nth-of-type(10),
+.nav-table td:nth-of-type(12) {
+ /* width: 5%; */
+}
+
+.nav-table td:nth-of-type(14) {
+  padding: 0px;
+}
+
+.btn-delete-nav {
+  margin-bottom: -4px;
+}
+
+/* =============================PLUGINS============================ */
+/* DEBUG CONSOLE */
+#btn-debug {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+
+#console-debug {
+  position: absolute;
+  top: 50px;
+  right: 0px; 
+  width: 40%; 
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fdfdfd;
+  color: #333;
+  border: 1px solid #333;
+  padding: 20px;
+  margin-top: 0px;
+  z-index: 100;
+}
+
+#console-debug h2 {
+  padding: 15px 0px;
+  color: #000;
+}
+
+#console-debug .debug-title {
+  font-size: 28px;
+  text-align: center;
+  color: #000;
+  border-bottom: 2px solid #333; 
+}
+
+#console-debug a {
+  color: #33F5FF;  
+}
