@@ -3,8 +3,10 @@
 - This version does not use bootstrap
 
 # FEATURES:
+- Auto install file
 - admin dashboard
 - media manager
+- Image galleries
 - slider manager
 - widgetized sidebar
 - custom page types
@@ -25,3 +27,4 @@
 - create a sql database with username and password
 - FTP files to root folder
 - Open index.php in browser
+- Follow Auto Install Instructions
